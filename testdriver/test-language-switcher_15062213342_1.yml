@@ -1,0 +1,29 @@
+version: 4.2.29
+session: 6826df9332878913ca8e394a
+steps:
+  - prompt: Click on the language switcher.
+    commands:
+      - command: hover-text
+        text: العربية
+        description: language switcher in the top right corner of the webpage
+        action: click
+  - prompt: Select a language.
+    commands:
+      - command: hover-text
+        text: English
+        description: language switcher in the top right corner of the webpage
+        action: click
+      - command: hover-text
+        text: العربية
+        description: language switcher in the top right corner of the webpage
+        action: click
+  - prompt: Select a language.
+    commands:
+      - command: hover-text
+        text: English
+        description: language option in the language selection menu
+        action: click
+      - command: hover-text
+        text: العربية
+        description: language switcher in the top right corner of the webpage
+        action: click
