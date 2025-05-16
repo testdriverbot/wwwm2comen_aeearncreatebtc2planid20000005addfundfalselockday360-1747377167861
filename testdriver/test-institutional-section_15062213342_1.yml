@@ -1,0 +1,28 @@
+version: 4.2.29
+session: 6826df85471a7c27ceb7b49e
+steps:
+  - prompt: Navigate to the "Institutional" section from the menu.
+    commands:
+      - command: hover-text
+        text: Institutional
+        description: menu item for the Institutional section at the top of the page
+        action: click
+  - prompt: Assert that institutional services overview is displayed.
+    commands:
+      - command: assert
+        expect: >-
+          Your virtual assets hub that caters for institutional and corporates
+          equipped with all tools needed for a regulated, reliable and secure
+          investment journey.
+  - prompt: Scroll through the services.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Assert that no errors are present during scrolling.
+    commands:
+      - command: assert
+        expect: No error messages are visible on the screen.
