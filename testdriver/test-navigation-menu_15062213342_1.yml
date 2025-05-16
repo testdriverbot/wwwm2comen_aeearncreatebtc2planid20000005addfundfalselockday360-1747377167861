@@ -1,0 +1,23 @@
+version: 4.2.29
+session: 6826df2932878913ca8e390d
+steps:
+  - prompt: Click on the "Home" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Home
+        description: home link in the navigation menu on the left
+        action: click
+  - prompt: Assert that the home page is displayed.
+    commands:
+      - command: assert
+        expect: Welcome to M2 is visible on the page
+  - prompt: Click on the "Portfolio" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Portfolio
+        description: portfolio link in the navigation menu on the left
+        action: click
+  - prompt: Assert that the portfolio page is displayed.
+    commands:
+      - command: assert
+        expect: Portfolio page is displayed with title 'Portfolio'
