@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 6826df35471a7c27ceb7b45c
+steps:
+  - prompt: Navigate to the "Spot Trading" section.
+    commands:
+      - command: hover-text
+        text: Spot Trading
+        description: spot trading option in the sidebar
+        action: click
+  - prompt: Assert that a list of available trading pairs is displayed.
+    commands:
+      - command: assert
+        expect: the list of trading pairs is displayed under "Order Book"
