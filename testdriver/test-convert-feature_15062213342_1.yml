@@ -1,0 +1,49 @@
+version: 4.2.29
+session: 6826df5b471a7c27ceb7b47d
+steps:
+  - prompt: Navigate to the "Convert" section.
+    commands:
+      - command: hover-text
+        text: Convert
+        description: convert option in the sidebar menu
+        action: click
+  - prompt: Select currencies to convert.
+    commands:
+      - command: hover-text
+        text: USDT
+        description: currency dropdown for 'From' selection
+        action: click
+      - command: hover-text
+        text: BTC
+        description: currency dropdown for 'To' selection
+        action: click
+  - prompt: Select currencies to convert.
+    commands:
+      - command: hover-text
+        text: ETH
+        description: select Ethereum from the currency list
+        action: click
+  - prompt: Enter an amount to convert.
+    commands:
+      - command: hover-text
+        text: '0.00'
+        description: amount input field for 'From' currency
+        action: click
+      - command: type
+        text: '100'
+  - prompt: Click "Convert".
+    commands:
+      - command: hover-text
+        text: Buy ETH
+        description: button to execute the conversion
+        action: click
+  - prompt: Click "Convert".
+    commands:
+      - command: hover-text
+        text: Buy ETH
+        description: disabled convert button
+        action: click
+  - prompt: Assert that the conversion result is displayed.
+    commands:
+      - command: assert
+        expect: the conversion result "3,975.75637813 ETH" is displayed
