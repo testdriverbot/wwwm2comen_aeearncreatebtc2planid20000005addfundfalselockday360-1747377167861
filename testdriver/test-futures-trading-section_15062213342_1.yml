@@ -1,0 +1,29 @@
+version: 4.2.29
+session: 6826df2432878913ca8e3909
+steps:
+  - prompt: Navigate to the "Futures Trading" section.
+    commands:
+      - command: hover-text
+        text: Futures Trading
+        description: futures trading option in the sidebar
+        action: click
+  - prompt: Assert that futures trading information is displayed.
+    commands:
+      - command: assert
+        expect: futures trading information is displayed
+  - prompt: Select a futures contract.
+    commands:
+      - command: hover-text
+        text: BTC-USDT
+        description: futures contract dropdown in the top left corner
+        action: click
+  - prompt: Select a futures contract.
+    commands:
+      - command: hover-text
+        text: ETHUSDT
+        description: ethusdt futures contract in the list
+        action: click
+  - prompt: Assert that contract details are shown.
+    commands:
+      - command: assert
+        expect: contract details for ETHUSDT are displayed
